@@ -10,7 +10,7 @@
     "lint": "eslint --fix",
     "prettier": "npx prettier --write .",
     "build": "rimraf -rf ./dist ./lib ./esm && rollup --config",
-    "commit": "cz",
+    "commit": "git add . && cz",
     "ci": "run-s lint test build"
   },
   "keywords": [],
@@ -42,7 +42,7 @@
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "*.js": [
       "eslint --fix",
       "prettier --write"
     ]
